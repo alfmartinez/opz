@@ -3,6 +3,8 @@ import {
     GraphQLNonNull,
     GraphQLString
 } from 'graphql';
+import OperationModel from '../../../models/operation';
+
 
 export default {
     type: OperationType,
@@ -12,9 +14,9 @@ export default {
         }
     },
     async resolve (root, params, options) {
-        return {
-            id: params.episode+'_GO',
+        const operation = new OperationModel({
             episode: params.episode
-        };
+        });
+        return await operation.save();
     }
 }

@@ -2,6 +2,7 @@ import {GraphQLList, GraphQLString} from 'graphql';
 import {CharacterType} from "./types/CharacterType";
 import {ArcType} from "./types/ArcType";
 import {OperationType} from "./types/OperationType";
+import OperationModel from '../models/operation';
 
 export default {
     characters: {
@@ -40,10 +41,7 @@ export default {
             }
         },
         resolve(root,params,options) {
-            return {
-                id: params.id,
-                episode: 'EPISODE OK'
-            }
+            return OperationModel.findById(params.id).exec();
         }
     },
 }

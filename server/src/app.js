@@ -20,7 +20,7 @@ app.use('/graphql', graphqlHTTP(req => ({
 })));
 
 // Connect mongo database
-mongoose.connect('mongodb://localhost/graphql');
+mongoose.connect('mongodb://localhost/opz');
 
 // start server
 var server = app.listen(8080, () => {

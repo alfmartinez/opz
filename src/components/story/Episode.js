@@ -17,8 +17,8 @@ const Episode = ({title,id,mutate, history}) => <li>
 const createOperation = gql`
 mutation createOperation($episode: String!) {
     createOperation(episode: $episode ) {
-        id
         episode
+        id
     }
 }
 `;

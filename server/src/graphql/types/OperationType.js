@@ -1,4 +1,13 @@
-import {GraphQLID, GraphQLNonNull, GraphQLObjectType, GraphQLString} from "graphql";
+import {GraphQLID, GraphQLNonNull, GraphQLObjectType, GraphQLString, GraphQLList} from "graphql";
+
+export const LogType = new GraphQLObjectType({
+    name: 'Log',
+    fields: {
+        message: {
+            type: GraphQLString
+        }
+    }
+})
 
 export const OperationType = new GraphQLObjectType({
     name: 'Operation',
@@ -8,6 +17,9 @@ export const OperationType = new GraphQLObjectType({
         },
         episode: {
             type: GraphQLString
+        },
+        log: {
+            type: new GraphQLList(LogType)
         }
     }
 });
