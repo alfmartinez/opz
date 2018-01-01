@@ -3,6 +3,7 @@ import graphqlHTTP from 'express-graphql';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import schema from './graphql/index';
+import 'babel-polyfill';
 
 var app = express();
 
