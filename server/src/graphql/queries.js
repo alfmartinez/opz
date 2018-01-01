@@ -1,6 +1,7 @@
-import {GraphQLList} from 'graphql';
+import {GraphQLList, GraphQLString} from 'graphql';
 import {CharacterType} from "./types/CharacterType";
 import {ArcType} from "./types/ArcType";
+import {OperationType} from "./types/OperationType";
 
 export default {
     characters: {
@@ -30,5 +31,19 @@ export default {
                 }]
             }]
         }
-    }
+    },
+    operation: {
+        type: OperationType,
+        args: {
+            id: {
+                type: GraphQLString
+            }
+        },
+        resolve(root,params,options) {
+            return {
+                id: params.id,
+                episode: 'EPISODE OK'
+            }
+        }
+    },
 }

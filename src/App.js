@@ -6,6 +6,7 @@ import {
 import Home from "./pages/Home";
 import Characters from "./pages/Characters";
 import Story from "./pages/Story";
+import Operation from "./pages/Operation";
 
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
                     <Route exact path="/" component={Home}/>
                     <Route path="/characters" component={Characters}/>
                     <Route path="/story" component={Story}/>
+                    <Route path="/operation/:id" component={Operation}/>
                 </div>
             </Router>
         );

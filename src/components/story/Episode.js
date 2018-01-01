@@ -1,12 +1,14 @@
 import React from 'react';
 import {graphql} from 'react-apollo';
 import gql from 'graphql-tag';
+import {withRouter} from 'react-router-dom';
 
-const Episode = ({title,id,mutate}) => <li>
+const Episode = ({title,id,mutate, history}) => <li>
     {title}
     <button onClick={() => mutate({variables: {episode: id}})
         .then(({ data }) => {
             console.log('got data', data);
+            history.push('/operation/'+data.createOperation.id)
         }).catch((error) => {
             console.log('there was an error sending the query', error);
         })}>Start</button>
@@ -21,4 +23,4 @@ mutation createOperation($episode: String!) {
 }
 `;
 
-export default graphql(createOperation)(Episode);
+export default withRouter(graphql(createOperation)(Episode));
