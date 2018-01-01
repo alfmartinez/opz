@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Characters from "./pages/Characters";
 import Story from "./pages/Story";
 import Operation from "./pages/Operation";
+import Register from "./pages/Register";
 
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
             <Router>
                 <div>
                     <Route exact path="/" component={Home}/>
+                    <Route path="/register" component={Register} />
                     <Route path="/characters" component={Characters}/>
                     <Route path="/story" component={Story}/>
                     <Route path="/operation/:id" component={Operation}/>
