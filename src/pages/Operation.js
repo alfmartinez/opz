@@ -19,6 +19,7 @@ query operation($id: String!) {
         episode
         log {
             message
+            id
         }
     }
 } 

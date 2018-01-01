@@ -15,7 +15,10 @@ export default {
     },
     async resolve (root, params, options) {
         const operation = new OperationModel({
-            episode: params.episode
+            episode: params.episode,
+            log: [{
+                message: 'Operation initiated'
+            }]
         });
         return await operation.save();
     }

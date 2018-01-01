@@ -5,6 +5,9 @@ export const LogType = new GraphQLObjectType({
     fields: {
         message: {
             type: GraphQLString
+        },
+        id: {
+            type: GraphQLID
         }
     }
 })
