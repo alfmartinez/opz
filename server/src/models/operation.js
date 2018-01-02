@@ -11,7 +11,8 @@ var operationSchema = new mongoose.Schema({
     team: [{
         id: String,
         name: String,
-        specialReady: Boolean
+        specialReady: Boolean,
+        hitpoints: Number
     }],
     opponents: [{
         template: String,

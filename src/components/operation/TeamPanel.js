@@ -5,7 +5,7 @@ const TeamPanel = ({team}) => (
         <h3>Team</h3>
         <ul>
             {team.map(item => <li key={item.id}>
-                {item.id}
+                {item.id} ({item.hitpoints})
                 <button disabled={!item.specialReady}>Use Skill</button>
             </li>)}
         </ul>

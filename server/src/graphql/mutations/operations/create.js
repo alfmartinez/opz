@@ -22,11 +22,13 @@ export default {
             team: [{
                 id: 'one',
                 name: 'Simus One',
-                specialReady: false
+                specialReady: false,
+                hitpoints: 128
             },{
                 id: 'two',
                 name: 'Simus Two',
-                specialReady: true
+                specialReady: true,
+                hitpoints: 128
             }],
             opponents: [{
                 template: 'goon',

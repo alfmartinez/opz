@@ -22,6 +22,7 @@ query operation($id: String!) {
             id
             name
             specialReady
+            hitpoints
         }
         log {
             message
