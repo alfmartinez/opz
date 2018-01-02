@@ -6,10 +6,8 @@ import OperationView from "../components/operation/OperationView";
 
 const Operation = ({data}) => {
     if (data.loading) return 'Loading';
-    const {operation: {id,team}} = data;
     return <div>
         <OperationView {...data} />
-        <TeamPanel team={team} id={id} />
     </div>;
 }
 
