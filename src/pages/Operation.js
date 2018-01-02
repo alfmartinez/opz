@@ -1,14 +1,15 @@
 import React from 'react';
 import {graphql} from 'react-apollo';
 import gql from 'graphql-tag';
-import OperationLog from '../components/operation/OperationLog';
+import TeamPanel from "../components/operation/TeamPanel";
+import OperationView from "../components/operation/OperationView";
 
 const Operation = ({data}) => {
     if (data.loading) return 'Loading';
-    const {operation: {id,log}} = data;
+    const {operation: {id,team}} = data;
     return <div>
-        <h1>Operation page {id}</h1>
-        <OperationLog log={log} />
+        <OperationView {...data} />
+        <TeamPanel team={team} id={id} />
     </div>;
 }
 
@@ -17,9 +18,18 @@ query operation($id: String!) {
     operation(id: $id) {
         id
         episode
+        team {
+            id
+            name
+            specialReady
+        }
         log {
             message
             id
+        }
+        opponents {
+            template
+            hitpoints
         }
     }
 } 

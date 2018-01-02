@@ -18,6 +18,19 @@ export default {
             episode: params.episode,
             log: [{
                 message: 'Operation initiated'
+            }],
+            team: [{
+                id: 'one',
+                name: 'Simus One',
+                specialReady: false
+            },{
+                id: 'two',
+                name: 'Simus Two',
+                specialReady: true
+            }],
+            opponents: [{
+                template: 'goon',
+                hitpoints: 128
             }]
         });
         return await operation.save();

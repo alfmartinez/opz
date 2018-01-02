@@ -7,6 +7,15 @@ var operationSchema = new mongoose.Schema({
     },
     log: [{
         message: String
+    }],
+    team: [{
+        id: String,
+        name: String,
+        specialReady: Boolean
+    }],
+    opponents: [{
+        template: String,
+        hitpoints: Number
     }]
 });
 

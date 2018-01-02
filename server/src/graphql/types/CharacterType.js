@@ -1,4 +1,4 @@
-import {GraphQLID, GraphQLNonNull, GraphQLObjectType, GraphQLString} from "graphql";
+import {GraphQLID, GraphQLNonNull, GraphQLObjectType, GraphQLString, GraphQLBoolean, GraphQLInt} from "graphql";
 
 export const CharacterType = new GraphQLObjectType({
     name: 'Character',
@@ -8,6 +8,15 @@ export const CharacterType = new GraphQLObjectType({
         },
         name: {
             type: GraphQLString
+        },
+        specialReady: {
+            type: GraphQLBoolean
+        },
+        template: {
+            type: GraphQLString
+        },
+        hitpoints: {
+            type: GraphQLInt
         }
     }
 });

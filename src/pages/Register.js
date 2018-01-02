@@ -28,6 +28,7 @@ class Register extends Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
+                <h2>Register</h2>
                 <fieldset>
                     <label>
                         Username:
@@ -48,7 +49,7 @@ class Register extends Component {
 const registerUser = gql`
 mutation registerUser($username: String!, $password: String!) {
     registerUser(username: $username, password: $password) {
-        token
+        id
     }
 }
 `;

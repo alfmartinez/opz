@@ -1,4 +1,5 @@
 import {GraphQLID, GraphQLNonNull, GraphQLObjectType, GraphQLString, GraphQLList} from "graphql";
+import {CharacterType} from "./CharacterType";
 
 export const LogType = new GraphQLObjectType({
     name: 'Log',
@@ -23,6 +24,12 @@ export const OperationType = new GraphQLObjectType({
         },
         log: {
             type: new GraphQLList(LogType)
+        },
+        team: {
+            type: new GraphQLList(CharacterType)
+        },
+        opponents: {
+            type: new GraphQLList(CharacterType)
         }
     }
 });
