@@ -1,7 +1,6 @@
 import React from 'react';
 import {graphql} from 'react-apollo';
 import gql from 'graphql-tag';
-import TeamPanel from "../components/operation/TeamPanel";
 import OperationView from "../components/operation/OperationView";
 
 const Operation = ({data}) => {

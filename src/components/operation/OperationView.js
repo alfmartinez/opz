@@ -2,6 +2,7 @@ import React from 'react';
 import EnemyPanel from "./EnemyPanel";
 import OperationLog from "./OperationLog";
 import TeamPanel from "./TeamPanel";
+import TurnManager from "./TurnManager";
 
 class OperationView extends React.Component {
     constructor(props) {
@@ -28,7 +29,7 @@ class OperationView extends React.Component {
             <EnemyPanel opponents={this.state.opponents}/>
             <OperationLog log={this.state.log}/>
             <TeamPanel team={this.state.team}/>
-            <button onClick={this.advanceTurn}>Advance</button>
+            <TurnManager advance={this.advanceTurn} />
         </div>
     }
 }
