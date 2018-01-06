@@ -4,7 +4,7 @@ import {ProfileType} from "../../types/ProfileType";
 import ProfileModel from '../../../models/profile';
 
 export default {
-    profiles: {
+    profile: {
         type: ProfileType,
         args: {
             playerId: {

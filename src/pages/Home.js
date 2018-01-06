@@ -1,9 +1,9 @@
 import React from 'react';
 import Navigation from './Navigation';
 
-const Home = () => (
+const Home = ({profile}) => (
     <div>
-        <h1>Home</h1>
+        <h1>Welcome {profile.name}</h1>
         <Navigation />
     </div>
 )
