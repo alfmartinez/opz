@@ -27,12 +27,16 @@ const App = ({data}) => {
 }
 
 const characters = gql`
-{
-    characters {
+query ($playerId: String!) {
+    profiles(playerId: $playerId) {
+        name
+        playerId
+    }
+    characters(playerId: $playerId) {
         id
         name
     }
-    arcs {
+    arcs(playerId: $playerId) {
         id
         title
         chapters {
@@ -47,4 +51,6 @@ const characters = gql`
 }
 `;
 
-export default graphql(characters)(App);
+export default graphql(characters,{
+    options: () => ({variables: {playerId: localStorage.getItem('playerId')}}),
+})(App);
