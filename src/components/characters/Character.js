@@ -16,9 +16,9 @@ class Character extends React.Component {
     }
 
     render() {
-        const {name} = this.props;
+        const {type} = this.props;
         return <li>
-            {name} <button onClick={() => this.mutate()}>Rename</button>
+            {type.name} <button onClick={() => this.mutate()}>Rename</button>
         </li>;
     }
 }

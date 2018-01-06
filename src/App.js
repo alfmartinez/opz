@@ -34,7 +34,10 @@ query ($playerId: String!) {
     }
     characters(playerId: $playerId) {
         id
-        name
+        type {
+            id
+            name
+        }
     }
     arcs(playerId: $playerId) {
         id

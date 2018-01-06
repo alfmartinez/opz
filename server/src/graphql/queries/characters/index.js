@@ -1,5 +1,6 @@
 import {GraphQLList,GraphQLString} from 'graphql';
 import {CharacterType} from "../../types/CharacterType";
+import Character from "../../../models/character";
 
 export default {
     characters: {
@@ -10,10 +11,7 @@ export default {
             }
         },
         resolve(root, params, options) {
-            return [{
-                id: 'Test',
-                name: 'Dream'
-            }]
+            return Character.find({playerId: params.playerId}).populate('type');
         }
     }
 }
