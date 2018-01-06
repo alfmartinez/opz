@@ -1,12 +1,11 @@
 import React from 'react';
+import Character from "./Character";
 
 const CharacterList = ({characters}) => {
-    const elements = characters.map(({id,name}) => <li key={id}>{name}</li>);
-
     return <div>
         <h2>{characters.length} character</h2>
         <ul>
-            {elements}
+            {characters.map(item => <Character key={item.id} {...item} />)}
         </ul>
     </div>
 }

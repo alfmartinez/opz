@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from './Navigation';
-import CharacterList from "../components/CharacterList";
+import CharacterList from "../components/characters/CharacterList";
 
 const Characters = ({characters}) => (
     <div>
