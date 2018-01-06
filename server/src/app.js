@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import schema from './graphql/index';
 import 'babel-polyfill';
+import fixtures from './models/fixtures';
 
 var app = express();
 
@@ -21,6 +22,8 @@ app.use('/graphql', graphqlHTTP(req => ({
 
 // Connect mongo database
 mongoose.connect('mongodb://localhost/opz');
+
+fixtures.load();
 
 // start server
 var server = app.listen(8080, () => {
