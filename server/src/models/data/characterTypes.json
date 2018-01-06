@@ -1,7 +1,10 @@
 [{
-  "id": "doc-khan",
+  "key": "dockhan",
   "name": "Doctor Khan"
 },{
-  "id": "moon",
+  "key": "moon",
   "name": "Moon Gratz"
+},{
+  "key": "eliteroll",
+  "name": "Ellie Troll"
 }]

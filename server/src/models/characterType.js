@@ -1,10 +1,8 @@
 import mongoose from 'mongoose';
 
 var characterTypeSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true
-    }
+    name: String,
+    key: String
 });
 
 export default mongoose.model('CharacterType', characterTypeSchema);
