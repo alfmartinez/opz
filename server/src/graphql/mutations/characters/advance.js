@@ -19,13 +19,12 @@ export default {
         }
     },
     async resolve(root, params, options) {
-        console.log(params);
-        const character = await Character.findOneAndUpdate(
-            {_id: params.character},
-            {$inc: {xp: params.amount}},
-            {new: true}
-        ).exec();
-        console.log(character);
-        return character;
+        return await Character.findById(params.character)
+            .populate('type')
+            .then(doc => {
+                doc.advance(params.amount);
+                doc.save();
+                return doc;
+            });
     }
 }

@@ -1,10 +1,25 @@
 [{
   "key": "dockhan",
-  "name": "Doctor Khan"
+  "name": "Doctor Khan",
+  "growth": {
+    "vitality": 3,
+    "technique": 3,
+    "aura": 3
+  }
 },{
   "key": "moon",
-  "name": "Moon Gratz"
+  "name": "Moon Gratz",
+  "growth": {
+    "vitality": 2.6,
+    "technique": 3.2,
+    "aura": 3.2
+  }
 },{
   "key": "eliteroll",
-  "name": "Ellie Troll"
+  "name": "Ellie Troll",
+  "growth": {
+    "vitality": 3.4,
+    "technique": 2.8,
+    "aura": 2.8
+  }
 }]

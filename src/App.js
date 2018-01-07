@@ -39,6 +39,16 @@ query ($playerId: String!) {
             name
         }
         xp
+        level
+        stats {
+            vitality
+            aura
+            technique
+        }
+        hitpoints {
+            current
+            max
+        }
     }
     arcs(playerId: $playerId) {
         id

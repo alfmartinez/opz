@@ -1,4 +1,5 @@
 import {GraphQLID, GraphQLNonNull, GraphQLObjectType, GraphQLString, GraphQLBoolean, GraphQLInt} from "graphql";
+import {StatsType} from "./StatsType";
 
 export const CharacterTypeType = new GraphQLObjectType({
     name: 'CharacterType',
@@ -11,6 +12,9 @@ export const CharacterTypeType = new GraphQLObjectType({
         },
         key: {
             type: GraphQLString
+        },
+        stats: {
+            type: StatsType
         }
     }
 });

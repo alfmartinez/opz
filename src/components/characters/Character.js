@@ -17,9 +17,9 @@ class Character extends React.Component {
     }
 
     render() {
-        const {type,xp} = this.props;
+        const {type,xp,level,stats} = this.props;
         return <li>
-            {type.name} ({xp}) <button onClick={() => this.mutate()}>Advance</button>
+            {type.name} lvl {level} ({xp}) <button onClick={() => this.mutate()}>Advance</button>
         </li>;
     }
 }
@@ -28,6 +28,16 @@ mutation advance($character: ID!, $amount: Int!) {
     advance(character: $character, amount: $amount ) {
         id
         xp
+        level
+        stats {
+            vitality
+            aura
+            technique
+        }
+        hitpoints {
+            current
+            max
+        }
     }
 }
 `;
