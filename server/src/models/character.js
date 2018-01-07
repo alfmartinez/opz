@@ -5,7 +5,8 @@ var characterSchema = new mongoose.Schema({
         type: mongoose.Schema.ObjectId,
         ref: 'CharacterType'
     },
-    playerId: String
+    playerId: String,
+    xp: Number
 });
 
 export default mongoose.model('Character', characterSchema);

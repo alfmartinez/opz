@@ -18,6 +18,9 @@ export const CharacterType = new GraphQLObjectType({
         },
         type: {
             type: CharacterTypeType
+        },
+        xp: {
+            type: GraphQLInt
         }
     }
 });

@@ -11,22 +11,23 @@ class Character extends React.Component {
 
     mutate() {
         this.props.mutate({variables: {
-            character: this.props.id
+            character: this.props.id,
+            amount: 60
         }});
     }
 
     render() {
-        const {type} = this.props;
+        const {type,xp} = this.props;
         return <li>
-            {type.name} <button onClick={() => this.mutate()}>Rename</button>
+            {type.name} ({xp}) <button onClick={() => this.mutate()}>Advance</button>
         </li>;
     }
 }
 const rename = gql`
-mutation rename($character: ID!) {
-    rename(character: $character ) {
+mutation advance($character: ID!, $amount: Int!) {
+    advance(character: $character, amount: $amount ) {
         id
-        name
+        xp
     }
 }
 `;

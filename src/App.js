@@ -38,6 +38,7 @@ query ($playerId: String!) {
             id
             name
         }
+        xp
     }
     arcs(playerId: $playerId) {
         id

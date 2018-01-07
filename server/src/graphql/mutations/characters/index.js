@@ -1,5 +1,5 @@
-import rename from './rename';
+import advance from './advance';
 
 export default {
-    rename
+    advance
 }
