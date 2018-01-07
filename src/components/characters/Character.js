@@ -1,6 +1,7 @@
 import React from 'react';
 import {graphql} from 'react-apollo';
 import gql from 'graphql-tag';
+import CharacterDetails from "./CharacterDetails";
 
 
 class Character extends React.Component {
@@ -17,9 +18,8 @@ class Character extends React.Component {
     }
 
     render() {
-        const {type,xp,level,stats} = this.props;
         return <li>
-            {type.name} lvl {level} ({xp}) <button onClick={() => this.mutate()}>Advance</button>
+            <CharacterDetails {...this.props} /> <button onClick={() => this.mutate()}>Advance</button>
         </li>;
     }
 }
