@@ -5,7 +5,8 @@
     "vitality": 3,
     "technique": 3,
     "aura": 3
-  }
+  },
+  "npc": false
 },{
   "key": "moon",
   "name": "Moon Gratz",
@@ -13,7 +14,8 @@
     "vitality": 2.6,
     "technique": 3.2,
     "aura": 3.2
-  }
+  },
+  "npc": false
 },{
   "key": "eliteroll",
   "name": "Ellie Troll",
@@ -21,5 +23,6 @@
     "vitality": 3.4,
     "technique": 2.8,
     "aura": 2.8
-  }
+  },
+  "npc": true
 }]
